@@ -30,6 +30,9 @@ const DarkTheme = createMuiTheme({
             fontSize: '3.75rem', //60 px,
             fontWeight: 'bold',
             color: '#303030'
+        },
+        body1: {
+            color: '#303030'
         }
     }
 });

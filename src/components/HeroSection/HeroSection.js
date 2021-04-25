@@ -35,7 +35,7 @@ const HeroSection = () => {
                     </Typography>
                 </Box>
                 <Box className={classes.heroInfoContainer}>
-                    <Typography>
+                    <Typography variant={'body1'}>
                         Lorem ipsum dolor sit amet,am aperiam asperiores eius eveniet iure libero magnam non numquam officiis perferendis porro qui quis sequi similique sit ullam vero, voluptatibus.
                     </Typography>
                 </Box>
