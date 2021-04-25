@@ -1,6 +1,5 @@
 import React from 'react';
-import {AppBar, Box, Button, Container, IconButton, makeStyles, Switch, Toolbar} from "@material-ui/core";
-import DehazeOutlinedIcon from '@material-ui/icons/DehazeOutlined';
+import {AppBar, Box, Button, Container, makeStyles, Switch, Toolbar} from "@material-ui/core";
 import {useDispatch, useSelector} from "react-redux";
 import {selectIsDarkMode, toggleDarkMode} from "../../store/darkMode/darkModeSlice";
 

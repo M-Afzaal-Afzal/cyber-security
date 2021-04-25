@@ -1,11 +1,13 @@
 import React from 'react';
-import Container from '@material-ui/core/Container';
 import {Box} from "@material-ui/core";
+import HeroSection from "../src/components/HeroSection/HeroSection";
 
-export default function Index() {
-  return (
-    <Container maxWidth="lg">
-        <Box>Home Page</Box>
-    </Container>
-  );
+const Index = () => {
+    return (
+        <Box>
+            <HeroSection/>
+        </Box>
+    );
 }
+
+export default Index;
