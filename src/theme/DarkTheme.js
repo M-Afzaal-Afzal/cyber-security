@@ -1,5 +1,5 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-import { red } from '@material-ui/core/colors';
+import {createMuiTheme} from '@material-ui/core/styles';
+import {red} from '@material-ui/core/colors';
 
 // Create a lightTheme instance.
 const DarkTheme = createMuiTheme({
@@ -7,10 +7,16 @@ const DarkTheme = createMuiTheme({
         // We use these pallets for dark theme
         type: 'dark',
         primary: {
-            main: '#556cd6',
+            main: '#0099f7',
         },
-        secondary: {
-            main: '#19857b',
+        gray: {
+            main: '#d1d8e1',
+        },
+        darkGray: {
+            main: '#2b2d2e',
+        },
+        lightGray: {
+            main: '#f2f2f2',
         },
         error: {
             main: red.A400,
@@ -19,6 +25,13 @@ const DarkTheme = createMuiTheme({
             default: '#fff',
         },
     },
+    typography: {
+        h1: {
+            fontSize: '3.75rem', //60 px,
+            fontWeight: 'bold',
+            color: '#303030'
+        }
+    }
 });
 
 export default DarkTheme;
