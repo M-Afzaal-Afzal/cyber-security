@@ -24,10 +24,14 @@ const useStyles = makeStyles(theme => ({
     },
     featureItem: {
         display: 'grid',
+        maxWidth: '420px',
         gridTemplateColumns: 'auto 1fr',
         padding: '2rem',
         paddingLeft: '0',
         columnGap:'1.5rem',
+        [theme.breakpoints.down('xs')]: {
+            paddingRight: 0,
+        }
     },
     itemIconContainer: {
         width: '65px',
@@ -108,7 +112,7 @@ const FeatureSection = () => {
 
                 {/*    Grid for feature items     */}
 
-                <Grid container align={'center'}>
+                <Grid container justify={'center'} align={'center'}>
 
                     {
                         featuresArr.map(feature => (

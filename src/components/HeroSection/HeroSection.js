@@ -5,7 +5,16 @@ import RoundedButton from "../Buttons/RoundedButton";
 const useStyles = makeStyles(theme => ({
     heroSection: {
         background: theme.palette.gray.main,
-        padding: '8rem 12rem'
+        padding: '8rem 12rem',
+        [theme.breakpoints.down('md')]: {
+            padding: '8rem 6rem',
+        },
+        [theme.breakpoints.down('sm')]: {
+            padding: '6rem 1rem',
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: '4rem 0',
+        },
     },
     heroHeadingContainer: {
         maxWidth: '45rem'
