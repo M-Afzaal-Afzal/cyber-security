@@ -10,7 +10,7 @@ const DarkTheme = createMuiTheme({
             main: '#0099f7',
         },
         gray: {
-            main: '#d1d8e1',
+            main: '#65666e',
         },
         darkGray: {
             main: '#2b2d2e',
@@ -21,7 +21,7 @@ const DarkTheme = createMuiTheme({
         error: {
             main: red.A400,
         },
-        background: {
+        white: {
             default: '#fff',
         },
     },
@@ -29,10 +29,18 @@ const DarkTheme = createMuiTheme({
         h1: {
             fontSize: '3.75rem', //60 px,
             fontWeight: 'bold',
-            color: '#303030'
+            color: '#fff',
+            lineHeight: '1.3',
+            letterSpacing: '1px'
+        },
+        h4: {
+          fontSize: '1.5rem',
+            color: 'white',
+            fontWeight: 'bold',
+            letterSpacing: '1px'
         },
         body1: {
-            color: '#303030'
+            color: '#fff'
         }
     }
 });

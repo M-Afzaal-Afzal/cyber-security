@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Button, Container, makeStyles, Typography} from "@material-ui/core";
+import {Box, Container, makeStyles, Typography} from "@material-ui/core";
 import RoundedButton from "../Buttons/RoundedButton";
 
 const useStyles = makeStyles(theme => ({
@@ -8,11 +8,7 @@ const useStyles = makeStyles(theme => ({
         padding: '8rem 12rem'
     },
     heroHeadingContainer: {
-        maxWidth: '40rem'
-    },
-    heroHeading: {
-        lineHeight: '1.3',
-        letterSpacing: '1.5'
+        maxWidth: '45rem'
     },
     heroButtonContainer: {
         marginTop: '2rem',
@@ -30,7 +26,7 @@ const HeroSection = () => {
         <Box className={classes.heroSection}>
             <Container maxWidth={'lg'}>
                 <Box className={classes.heroHeadingContainer}>
-                    <Typography className={classes.heroHeading} variant={'h1'}>
+                    <Typography variant={'h1'}>
                         THE BEST CHOICE FOR YOUR NEW WEBSITE
                     </Typography>
                 </Box>
