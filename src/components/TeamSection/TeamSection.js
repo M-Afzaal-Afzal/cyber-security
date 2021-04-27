@@ -1,12 +1,16 @@
 import React from 'react';
 import {Box, Container, Grid, makeStyles, Typography} from "@material-ui/core";
-import HeadingWithDivider from "./Universal/HeadingWithDivider";
+import HeadingWithDivider from "../Universal/HeadingWithDivider";
 import Image from "next/image";
 
 const useStyles = makeStyles(theme => ({
     teamSection: {
         background: theme.palette.lightGray.main,
         padding: '8rem 0'
+    },
+    teamTextContainer: {
+        maxWidth: '50rem',
+        margin: 'auto auto 4rem'
     },
     imageContainer: {
         width: '100%',
@@ -62,6 +66,11 @@ const TeamSection = () => {
         <Box className={classes.teamSection}>
             <Container maxWidth={'lg'}>
                 <HeadingWithDivider heading={'Meet Our Team'}/>
+                <Box className={classes.teamTextContainer}>
+                    <Typography align={'center'} variant={'body1'}>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur culpa dolorem dolores error eum eveniet exercitationem id in incidunt ipsam ipsum libero natus nesciunt, odit, placeat quia quis reprehenderit repudiandae!
+                    </Typography>
+                </Box>
 
                 {/*     Taem members pics with some description      */}
 
@@ -97,7 +106,6 @@ const TeamSection = () => {
 
                         ))
                     }
-
 
                 </Grid>
 

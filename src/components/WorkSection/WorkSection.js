@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box, Container, Grid, makeStyles, Typography} from "@material-ui/core";
-import HeadingWithDivider from "./Universal/HeadingWithDivider";
+import HeadingWithDivider from "../Universal/HeadingWithDivider";
 import SearchIcon from '@material-ui/icons/Search';
 import BuildIcon from '@material-ui/icons/Build';
 import LaunchIcon from '@material-ui/icons/Launch';

@@ -3,8 +3,8 @@ import {Box} from "@material-ui/core";
 import HeroSection from "../src/components/HeroSection/HeroSection";
 import FeatureSection from "../src/components/FeatureSection/FeatureSection";
 import HelpSection from "../src/components/HelpSection/HelpSection";
-import WorkSection from "../src/components/WorkSection";
-import TeamSection from "../src/components/TeamSection";
+import WorkSection from "../src/components/WorkSection/WorkSection";
+import TeamSection from "../src/components/TeamSection/TeamSection";
 
 const Index = () => {
     return (
