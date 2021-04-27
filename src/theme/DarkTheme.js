@@ -16,12 +16,12 @@ const DarkTheme = createMuiTheme({
             main: '#2b2d2e',
         },
         lightGray: {
-            main: '#f2f2f2',
+            main: '#7e7e7e',
         },
         error: {
             main: red.A400,
         },
-        white: {
+        default: {
             default: '#fff',
         },
     },
@@ -34,9 +34,15 @@ const DarkTheme = createMuiTheme({
             letterSpacing: '1px'
         },
         h4: {
-          fontSize: '1.5rem',
+            fontSize: '1.5rem',
             color: 'white',
             fontWeight: 'bold',
+            letterSpacing: '1px'
+        },
+        h5: {
+            fontSize: '1.5rem',
+            color: 'white',
+            fontWeight: 'normal',
             letterSpacing: '1px'
         },
         body1: {

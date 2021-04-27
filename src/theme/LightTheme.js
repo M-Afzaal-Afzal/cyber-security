@@ -20,7 +20,7 @@ const lightTheme = createMuiTheme({
     error: {
       main: red.A400,
     },
-    white: {
+    default: {
       default: '#fff',
     },
   },
@@ -39,6 +39,12 @@ const lightTheme = createMuiTheme({
       fontSize: '1.5rem',
       color: '#303030',
       fontWeight: 'bold',
+      letterSpacing: '1px'
+    },
+    h5: {
+      fontSize: '1.5rem',
+      color: 'white',
+      fontWeight: 'normal',
       letterSpacing: '1px'
     },
     body1: {

@@ -33,7 +33,7 @@ const Header = () => {
     }
 
     return (
-        <AppBar color={'white'} elevation={5} position={'fixed'}>
+        <AppBar color={'default'} elevation={5} position={'fixed'}>
             <Container maxWidth={'lg'}>
                 <Toolbar color={'gray'} disableGutters>
 

@@ -1,22 +1,17 @@
 import React from 'react';
-import {Box, Container, Divider, Grid, makeStyles, Typography} from "@material-ui/core";
+import {Box, Container, Grid, makeStyles, Typography} from "@material-ui/core";
 import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
 import DesktopMacIcon from '@material-ui/icons/DesktopMac';
 import EqualizerIcon from '@material-ui/icons/Equalizer';
 import ExtensionIcon from '@material-ui/icons/Extension';
 import SpeedIcon from '@material-ui/icons/Speed';
 import LiveHelpIcon from '@material-ui/icons/LiveHelp';
+import HeadingWithDivider from "../Universal/HeadingWithDivider";
 
 const useStyles = makeStyles(theme => ({
     featureSection: {
         background: theme.palette.paper,
         padding: '8rem 0'
-    },
-    dividerContainer: {
-        padding: '3rem',
-        maxWidth: '35rem',
-        textAlign: 'center',
-        margin: 'auto'
     },
     featureTextContainer: {
         maxWidth: '50rem',
@@ -94,14 +89,8 @@ const FeatureSection = () => {
     return (
         <Box className={classes.featureSection}>
             <Container maxWidth={'lg'}>
-                {/* main heading*/}
-                <Box>
-                    <Typography variant={'h1'} align={'center'}>Our Awesome Features</Typography>
-                </Box>
-                {/*divider*/}
-                <Box className={classes.dividerContainer}>
-                    <Divider/>
-                </Box>
+                {/* main heading with divider*/}
+                <HeadingWithDivider heading={'Our Awesome Features'}/>
                 {/* feature text*/}
                 <Box className={classes.featureTextContainer}>
                     <Typography align={'center'} variant={'body1'}>
@@ -116,7 +105,7 @@ const FeatureSection = () => {
 
                     {
                         featuresArr.map(feature => (
-                            <Grid lg={4} md={6} sm={12} item>
+                            <Grid key={feature.title} lg={4} md={6} sm={12} item>
                                 <Box className={classes.featureItem}>
                                     {/* left icon part of gridItem*/}
                                     <Box>
