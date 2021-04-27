@@ -45,8 +45,16 @@ const DarkTheme = createMuiTheme({
             fontWeight: 'normal',
             letterSpacing: '1px'
         },
+        h6: {
+            fontSize: 18,
+            fontWeight: 'bold',
+            letterSpacing: '1px'
+        },
         body1: {
             color: '#fff'
+        },
+        body2: {
+            fontSize: '16px'
         }
     }
 });

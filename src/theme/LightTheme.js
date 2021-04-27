@@ -47,8 +47,18 @@ const lightTheme = createMuiTheme({
       fontWeight: 'normal',
       letterSpacing: '1px'
     },
+    h6: {
+      fontSize: 18,
+      fontWeight: 'bold',
+      letterSpacing: '1px',
+      color: '#303030',
+    },
     body1: {
       color: '#303030'
+    },
+    body2: {
+      fontSize: '16px',
+      color: '#0099f7'
     }
   },
 
