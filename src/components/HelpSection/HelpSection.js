@@ -186,7 +186,7 @@ const HelpSection = () => {
                     <Grid item xs={12} md={6} className={classes.imageBoxContainer}>
                         {/*image section */}
                         <Box className={classes.imageContainer}>
-                            <Image alt={'achievement image'} layout={'fill'} objectFit={'cover'}
+                            <Image priority alt={'achievement image'} layout={'fill'} objectFit={'cover'}
                                    src={'/achievement/1.jpg'}/>
 
                             {/* label of images*/}
