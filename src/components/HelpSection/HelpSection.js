@@ -43,6 +43,11 @@ const useStyles = makeStyles(theme => ({
         height: '50px',
         width: '50px',
     },
+    progressTitle: {
+        [theme.breakpoints.down('xs')]: {
+            marginBottom: '.5rem',
+        }
+    },
     imageContainer: {
         position: 'relative',
         width: '100%',
@@ -51,7 +56,12 @@ const useStyles = makeStyles(theme => ({
             marginTop: '3rem',
             maxWidth: '30rem',
             height: '50rem',
-        }
+        },
+        [theme.breakpoints.down('xs')]: {
+            marginTop: '1.5rem',
+            maxWidth: '30rem',
+            height: '35rem',
+        },
     },
     imageBoxContainer: {
         padding: '0 2rem',
@@ -93,7 +103,7 @@ const useStyles = makeStyles(theme => ({
     imageBtnsContainer: {
         height: '100%',
         overflow: 'hidden',
-    }
+    },
 }))
 
 const HelpSection = () => {
@@ -154,7 +164,7 @@ const HelpSection = () => {
 
                         {progressBarsArr.map(({id, title, value}) => (
                             <Box key={id} className={classes.progressContainer}>
-                                <Box>
+                                <Box className={classes.progressTitle}>
                                     <Typography align={'left'} variant={'h4'}>{title}</Typography>
                                 </Box>
                                 <Box className={classes.progressLabelContainer}>
@@ -199,12 +209,16 @@ const HelpSection = () => {
                                     <Box className={classes.imageBtns}>
 
                                         <Box>
-                                            <Button color={'primary'} className={`${classes.sideBtn} ${classes.sideBtnFirst}`} variant={'contained'}>
+                                            <Button color={'primary'}
+                                                    className={`${classes.sideBtn} ${classes.sideBtnFirst}`}
+                                                    variant={'contained'}>
                                                 <ArrowForwardIosOutlined/>
                                             </Button>
                                         </Box>
                                         <Box>
-                                            <Button color={'primary'} className={`${classes.sideBtn} ${classes.sideBtnLast}`} variant={'contained'}>
+                                            <Button color={'primary'}
+                                                    className={`${classes.sideBtn} ${classes.sideBtnLast}`}
+                                                    variant={'contained'}>
                                                 <ArrowBackIosOutlined/>
                                             </Button>
                                         </Box>
