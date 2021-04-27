@@ -10,12 +10,12 @@ const useStyles = makeStyles(theme => ({
     },
 }))
 
-const HeadingWithDivider = ({heading}) => {
+const HeadingWithDivider = ({heading,white}) => {
     const classes = useStyles();
     return (
         <>
             <Box>
-                <Typography variant={'h1'} align={'center'}>{heading}</Typography>
+                <Typography variant={'h1'} style={{color: white ? 'white': ''}} align={'center'}>{heading}</Typography>
             </Box>
             {/*divider*/}
             <Box className={classes.dividerContainer}>

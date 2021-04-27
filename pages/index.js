@@ -5,6 +5,7 @@ import FeatureSection from "../src/components/FeatureSection/FeatureSection";
 import HelpSection from "../src/components/HelpSection/HelpSection";
 import WorkSection from "../src/components/WorkSection/WorkSection";
 import TeamSection from "../src/components/TeamSection/TeamSection";
+import ContactusSection from "../src/components/ContactusSection/ContactusSection";
 
 const Index = () => {
     return (
@@ -14,6 +15,7 @@ const Index = () => {
             <HelpSection/>
             <WorkSection/>
             <TeamSection/>
+            <ContactusSection/>
         </Box>
     );
 }
