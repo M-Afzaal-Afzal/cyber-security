@@ -41,10 +41,10 @@ const DarkTheme = createMuiTheme({
                 fontSize: '3.3rem',
             },
             [theme2.breakpoints.down('sm')]: {
-                fontSize: '3.2rem',
+                fontSize: '3rem',
             },
-            [theme2.breakpoints.down('sm')]: {
-                fontSize: '3.1rem',
+            [theme2.breakpoints.down('xs')]: {
+                fontSize: '2.5rem',
             },
         },
         h4: {

@@ -15,6 +15,11 @@ const useStyles = makeStyles(theme => ({
     helpSectionTextContainer: {
         marginBottom: '3rem',
     },
+    helpSectionText: {
+        [theme.breakpoints.down('md')]: {
+            textAlign: 'center',
+        }
+    },
     progressContainer: {
         margin: '2rem',
     },
@@ -173,7 +178,7 @@ const HelpSection = () => {
                     <Grid item xs={12} md={6}>
                         {/* side text of help section*/}
                         <Box className={classes.helpSectionTextContainer}>
-                            <Typography variant={'body1'} align={'left'}>
+                            <Typography className={classes.helpSectionText} variant={'body1'} align={'left'}>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam delectus
                                 illum iure officiis quas rerum soluta voluptates! Deleniti doloremque doloribus minima
                                 mollitia voluptatibus. Aspernatur dolorum ex facere inventore magnam?
