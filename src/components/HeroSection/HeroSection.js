@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box, Container, makeStyles, Typography} from "@material-ui/core";
 import RoundedButton from "../Buttons/RoundedButton";
+import {Link} from 'react-scroll';
 
 const useStyles = makeStyles(theme => ({
     heroSection: {
@@ -17,22 +18,32 @@ const useStyles = makeStyles(theme => ({
         },
     },
     heroHeadingContainer: {
-        maxWidth: '45rem'
+        maxWidth: '45rem',
+        [theme.breakpoints.down('xs')]: {
+            textAlign: 'center',
+        },
     },
     heroButtonContainer: {
         marginTop: '2rem',
+        [theme.breakpoints.down('xs')]: {
+            textAlign: 'center',
+        },
     },
     heroInfoContainer: {
         marginTop: '1rem',
-        maxWidth: '38rem'
+        maxWidth: '38rem',
+        [theme.breakpoints.down('xs')]: {
+            textAlign: 'center',
+        },
     }
 }))
 
 const HeroSection = () => {
+
     const classes = useStyles();
 
     return (
-        <Box className={classes.heroSection}>
+        <Box id={'home'} className={classes.heroSection}>
             <Container maxWidth={'lg'}>
                 <Box className={classes.heroHeadingContainer}>
                     <Typography variant={'h1'}>
@@ -41,11 +52,12 @@ const HeroSection = () => {
                 </Box>
                 <Box className={classes.heroInfoContainer}>
                     <Typography variant={'body1'}>
-                        Lorem ipsum dolor sit amet,am aperiam asperiores eius eveniet iure libero magnam non numquam officiis perferendis porro qui quis sequi similique sit ullam vero, voluptatibus.
+                        Lorem ipsum dolor sit amet,am aperiam asperiores eius eveniet iure libero magnam non numquam
+                        officiis perferendis porro qui quis sequi similique sit ullam vero, voluptatibus.
                     </Typography>
                 </Box>
                 <Box className={classes.heroButtonContainer}>
-                    <RoundedButton size={'large'} variant={'contained'} color={'primary'}>Contact us</RoundedButton>
+                    <RoundedButton component={Link} to={'contactus'} smooth={true} size={'large'} variant={'contained'} color={'primary'}>Contact us</RoundedButton>
                 </Box>
             </Container>
         </Box>

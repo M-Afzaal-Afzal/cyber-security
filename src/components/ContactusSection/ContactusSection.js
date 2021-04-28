@@ -34,7 +34,7 @@ const ContactusSection = () => {
     const classes = useStyles();
 
     return (
-        <Box className={classes.contactusSection}>
+        <Box id={'contactus'} className={classes.contactusSection}>
             <Container maxWidth={'lg'}>
 
                 <Box>

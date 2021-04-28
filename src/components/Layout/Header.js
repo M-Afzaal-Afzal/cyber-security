@@ -3,6 +3,7 @@ import {AppBar, Box, Button, Container, makeStyles, Switch, Toolbar} from "@mate
 import {useDispatch, useSelector} from "react-redux";
 import {selectIsDarkMode, toggleDarkMode} from "../../store/darkMode/darkModeSlice";
 import Image from "next/image";
+import {Link} from 'react-scroll'
 
 const useStyles = makeStyles(theme => ({
     grow: {
@@ -10,6 +11,8 @@ const useStyles = makeStyles(theme => ({
     },
     leftIconsContainer: {
         textAlign: "left",
+        display: 'flex',
+        alignItems: 'center',
     },
     rightIconsContainer: {
         textAlign: "right",
@@ -22,26 +25,17 @@ const useStyles = makeStyles(theme => ({
         position: 'relative',
         width: '200px',
         height: '50px',
+    },
+    imageLink: {
+        display: "inline-block",
+        cursor: 'pointer',
+        // height: '100%'
     }
 }))
 
 const Header = () => {
 
     const classes = useStyles();
-
-    // <!--Start of Tawk.to Script-->
-    // <script type="text/javascript">
-    //     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    //     (function(){
-    //     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    //     s1.async=true;
-    //     s1.src='https://embed.tawk.to/6088b57a5eb20e09cf373a76/1f4b09pkj';
-    //     s1.charset='UTF-8';
-    //     s1.setAttribute('crossorigin','*');
-    //     s0.parentNode.insertBefore(s1,s0);
-    // })();
-    // </script>
-    // <!--End of Tawk.to Script-->
 
     const isDarkMode = useSelector(selectIsDarkMode);
 
@@ -59,18 +53,20 @@ const Header = () => {
                     {/* Left Icons*/}
 
                     <Box className={`${classes.grow} ${classes.leftIconsContainer}`}>
-                        <Box className={classes.imageContainer}>
-                            <Image alt={'Cyber Security'} src={'/logoh.png'} layout={'fill'} objectFit={'cover'}/>
+                        <Box className={classes.imageLink} component={Link} to={'home'} smooth={true}>
+                            <Box className={classes.imageContainer}>
+                                <Image priority alt={'Cyber Security'} src={'/logoh.png'} layout={'fill'} objectFit={'cover'}/>
+                            </Box>
                         </Box>
                     </Box>
 
                     {/* Center Icons*/}
 
                     <Box className={`${classes.grow} ${classes.centerIconsContainer}`}>
-                        <Button>
+                        <Button component={Link} to={'home'} smooth={true}>
                             HOME
                         </Button>
-                        <Button>
+                        <Button component={Link} to={'contactus'} smooth={true}>
                             CONTACT US
                         </Button>
                     </Box>
@@ -83,7 +79,7 @@ const Header = () => {
                             checked={isDarkMode}
                             onChange={darkModeHandler}
                             name="Dark Mode Switch"
-                            inputProps={{ 'aria-label': 'Dark Mode Switch' }}
+                            inputProps={{'aria-label': 'Dark Mode Switch'}}
                         />
                     </Box>
 
