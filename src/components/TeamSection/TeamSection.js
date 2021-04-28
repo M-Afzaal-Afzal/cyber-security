@@ -43,19 +43,19 @@ const TeamSection = () => {
     const teamMembers = [
         {
             id: 1,
-            imageURL: '/achievement/1.jpg',
+            imageURL: '/team/1.jpg',
             name: 'M Afzaal Afzal',
             title: 'Founder (CEO)',
             desc: 'Lorem ips elit. Assumenda atque dolorum molestias natus recusandae! At distinctio eius esse ex exercitationem reiciendis voluptatum.',
         }, {
             id: 2,
-            imageURL: '/achievement/2.jpg',
+            imageURL: '/team/2.jpg',
             name: 'M Afzaal Afzal',
             title: 'Creative Director',
             desc: 'Lorem ips elit. Assumenda atque dolorum molestias natus recusandae! At distinctio eius esse ex exercitationem reiciendis voluptatum.',
         }, {
             id: 3,
-            imageURL: '/achievement/3.jpg',
+            imageURL: '/team/3.jpg',
             name: 'M Afzaal Afzal',
             title: 'Art Director',
             desc: 'Lorem ips elit. Assumenda atque dolorum molestias natus recusandae! At distinctio eius esse ex exercitationem reiciendis voluptatum.',
@@ -72,7 +72,7 @@ const TeamSection = () => {
                     </Typography>
                 </Box>
 
-                {/*     Taem members pics with some description      */}
+                {/*     Team members pics with some description      */}
 
                 <Grid container align={'center'} justify={'center'}>
 

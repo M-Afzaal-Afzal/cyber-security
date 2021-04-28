@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Box, Button, Container, Grid, LinearProgress, makeStyles, Typography} from "@material-ui/core";
 import HeadingWithDivider from "../Universal/HeadingWithDivider";
 import Image from 'next/image';
@@ -27,10 +27,6 @@ const useStyles = makeStyles(theme => ({
     linearProgressContainer: {
         maxWidth: '90%',
     },
-    linearProgressLabelContainer: {
-        // marginLeft: 'calc(100% - 250px)',
-        // zIndex: 999,
-    },
     linearProgressLabel: {
         display: "flex",
         alignItems: 'center',
@@ -50,6 +46,7 @@ const useStyles = makeStyles(theme => ({
     },
     imageContainer: {
         position: 'relative',
+        display: 'none',
         width: '100%',
         height: '100%',
         [theme.breakpoints.down('sm')]: {
@@ -104,6 +101,9 @@ const useStyles = makeStyles(theme => ({
         height: '100%',
         overflow: 'hidden',
     },
+    active: {
+        display: 'block',
+    }
 }))
 
 const HelpSection = () => {
@@ -137,7 +137,30 @@ const HelpSection = () => {
             value: '90'
         },
 
+    ];
+
+    const [achievementNo,setAchievementNo] = useState(0);
+
+    const achievements = [
+        {id: 1,title: 'Awwards Winning',subTitle: 'Business',imageURL: '/achievement/2.jpg'},
+        {id: 2,title: 'Awwards Winning',subTitle: 'Education',imageURL: '/achievement/1.jpg'},
     ]
+
+    const forwardAchievementHandler = () => {
+        if (achievementNo < (achievements.length -1)) {
+            setAchievementNo(achievementNo + 1);
+        } else {
+            setAchievementNo(0)
+        }
+    }
+
+    const backAchievementHandler = () => {
+        if (achievementNo > 0) {
+            setAchievementNo(achievementNo - 1);
+        } else {
+            setAchievementNo(achievements.length - 1)
+        }
+    }
 
     return (
         <Box className={classes.helpSection}>
@@ -185,50 +208,55 @@ const HelpSection = () => {
 
                     <Grid item xs={12} md={6} className={classes.imageBoxContainer}>
                         {/*image section */}
-                        <Box className={classes.imageContainer}>
-                            <Image priority alt={'achievement image'} layout={'fill'} objectFit={'cover'}
-                                   src={'/achievement/1.jpg'}/>
 
-                            {/* label of images*/}
+                        {
+                            achievements.map(({id,title,subTitle,imageURL},index) => (
+                                <Box key={id} className={`${classes.imageContainer} ${(achievementNo === index) ? classes.active : '' }`} >
+                                    <Image priority alt={'achievement image'} layout={'fill'} objectFit={'cover'}
+                                           src={imageURL}/>
 
-                            <Box className={classes.imageLabel}>
-                                <Box>
-                                    <Box>
-                                        <Typography align={'left'} variant={'h5'}>
-                                            Awwards Winning
-                                        </Typography>
-                                    </Box>
-                                    <Box>
-                                        <Typography align={'left'} variant={'h5'}>
-                                            Business
-                                        </Typography>
-                                    </Box>
-                                </Box>
+                                    {/* label of images*/}
 
-                                <Box className={classes.imageBtnsContainer}>
-                                    <Box className={classes.imageBtns}>
-
+                                    <Box className={classes.imageLabel}>
                                         <Box>
-                                            <Button color={'primary'}
-                                                    className={`${classes.sideBtn} ${classes.sideBtnFirst}`}
-                                                    variant={'contained'}>
-                                                <ArrowForwardIosOutlined/>
-                                            </Button>
-                                        </Box>
-                                        <Box>
-                                            <Button color={'primary'}
-                                                    className={`${classes.sideBtn} ${classes.sideBtnLast}`}
-                                                    variant={'contained'}>
-                                                <ArrowBackIosOutlined/>
-                                            </Button>
+                                            <Box>
+                                                <Typography align={'left'} variant={'h5'}>
+                                                    {title}
+                                                </Typography>
+                                            </Box>
+                                            <Box>
+                                                <Typography align={'left'} variant={'h5'}>
+                                                    {subTitle}
+                                                </Typography>
+                                            </Box>
                                         </Box>
 
+                                        <Box className={classes.imageBtnsContainer}>
+                                            <Box className={classes.imageBtns}>
+
+                                                <Box>
+                                                    <Button  onClick={forwardAchievementHandler} color={'primary'}
+                                                             className={`${classes.sideBtn} ${classes.sideBtnFirst}`}
+                                                             variant={'contained'}>
+                                                        <ArrowForwardIosOutlined/>
+                                                    </Button>
+                                                </Box>
+                                                <Box>
+                                                    <Button onClick={backAchievementHandler} color={'primary'}
+                                                            className={`${classes.sideBtn} ${classes.sideBtnLast}`}
+                                                            variant={'contained'}>
+                                                        <ArrowBackIosOutlined/>
+                                                    </Button>
+                                                </Box>
+
+                                            </Box>
+                                        </Box>
+
                                     </Box>
+
                                 </Box>
-
-                            </Box>
-
-                        </Box>
+                            ) )
+                        }
 
                     </Grid>
 
