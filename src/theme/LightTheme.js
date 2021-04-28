@@ -1,6 +1,8 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 import { red } from '@material-ui/core/colors';
 
+const theme2 = createMuiTheme();
+
 // Create a lightTheme instance.
 const lightTheme = createMuiTheme({
   // here we are using palette to define default colors
@@ -33,7 +35,19 @@ const lightTheme = createMuiTheme({
       fontWeight: 'bold',
       color: '#303030',
       lineHeight: '1.3',
-      letterSpacing: '1px'
+      letterSpacing: '1px',
+      [theme2.breakpoints.down('lg')]: {
+        fontSize: '3.5rem',
+      },
+      [theme2.breakpoints.down('md')]: {
+        fontSize: '3.3rem',
+      },
+      [theme2.breakpoints.down('sm')]: {
+        fontSize: '3.2rem',
+      },
+      [theme2.breakpoints.down('sm')]: {
+        fontSize: '3.1rem',
+      },
     },
     h4: {
       fontSize: '1.5rem',
