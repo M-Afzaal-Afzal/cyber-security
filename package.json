@@ -12,8 +12,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-redux": "^7.2.3",
-    "react-scroll": "^1.8.2",
-    "swiper": "^6.5.8"
+    "react-scroll": "^1.8.2"
   },
   "scripts": {
     "dev": "next",

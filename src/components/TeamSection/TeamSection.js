@@ -68,7 +68,9 @@ const TeamSection = () => {
                 <HeadingWithDivider heading={'Meet Our Team'}/>
                 <Box className={classes.teamTextContainer}>
                     <Typography align={'center'} variant={'body1'}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur culpa dolorem dolores error eum eveniet exercitationem id in incidunt ipsam ipsum libero natus nesciunt, odit, placeat quia quis reprehenderit repudiandae!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur culpa dolorem dolores
+                        error eum eveniet exercitationem id in incidunt ipsam ipsum libero natus nesciunt, odit, placeat
+                        quia quis reprehenderit repudiandae!
                     </Typography>
                 </Box>
 
@@ -81,7 +83,7 @@ const TeamSection = () => {
                             <Grid key={id} md={4} item className={classes.entityContainer}>
                                 {/* team person Image container*/}
                                 <Box className={classes.imageContainer}>
-                                    <Image layout={'fill'} objectFit={'cover'} src={imageURL}/>
+                                    <Image priority layout={'fill'} objectFit={'cover'} src={imageURL}/>
                                 </Box>
 
                                 <Box className={classes.memberNameContainer}>
