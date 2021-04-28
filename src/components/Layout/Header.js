@@ -55,7 +55,7 @@ const Header = () => {
                     <Box className={`${classes.grow} ${classes.leftIconsContainer}`}>
                         <Box className={classes.imageLink} component={Link} to={'home'} smooth={true}>
                             <Box className={classes.imageContainer}>
-                                <Image priority alt={'Cyber Security'} src={'/logoh.png'} layout={'fill'} objectFit={'cover'}/>
+                                <Image priority alt={'Cyber Security'} src={'https://res.cloudinary.com/afzaal1721/image/upload/v1619584623/Logoh_diisax.png'} layout={'fill'} objectFit={'cover'}/>
                             </Box>
                         </Box>
                     </Box>
