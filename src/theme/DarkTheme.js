@@ -52,18 +52,27 @@ const DarkTheme = createMuiTheme({
             color: 'white',
             fontWeight: 'bold',
             letterSpacing: '1px',
+            [theme2.breakpoints.down('xs')]: {
+                fontSize: '1.3rem',
+            },
 
         },
         h5: {
             fontSize: '1.5rem',
             color: 'white',
             fontWeight: 'normal',
-            letterSpacing: '1px'
+            letterSpacing: '1px',
+            [theme2.breakpoints.down('xs')]: {
+                fontSize: '1.3rem',
+            },
         },
         h6: {
             fontSize: 18,
             fontWeight: 'bold',
-            letterSpacing: '1px'
+            letterSpacing: '1px',
+            [theme2.breakpoints.down('xs')]: {
+                fontSize: '16px',
+            },
         },
         body1: {
             color: '#fff'

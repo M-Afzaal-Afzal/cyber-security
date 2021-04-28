@@ -46,8 +46,7 @@ const useStyles = makeStyles(theme => ({
     },
     imageContainer: {
         position: 'relative',
-        opacity: 0,
-        zIndex: 0,
+        display: 'none',
         width: '100%',
         height: '100%',
         [theme.breakpoints.down('sm')]: {
@@ -63,7 +62,6 @@ const useStyles = makeStyles(theme => ({
     },
     imageBoxContainer: {
         padding: '0 2rem',
-        position: 'relative',
         [theme.breakpoints.down('sm')]: {
             padding: 0
         }
@@ -104,15 +102,7 @@ const useStyles = makeStyles(theme => ({
         overflow: 'hidden',
     },
     active: {
-        opacity: 1,
-        zIndex: 1,
-    },
-    imageContainerForPosition: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%'
+        display: 'block',
     }
 }))
 
@@ -221,55 +211,54 @@ const HelpSection = () => {
 
                         {
                             achievements.map(({id, title, subTitle, imageURL}, index) => (
-                                <Box key={id} className={classes.imageContainerForPosition}>
-                                    <Box
-                                        className={`${classes.imageContainer}
+
+                                <Box
+                                    className={`${classes.imageContainer}
                                       ${(achievementNo === index) ? classes.active : ''}`}
-                                    >
-                                        <Image priority alt={'achievement image'} layout={'fill'} objectFit={'cover'}
-                                               src={imageURL}/>
+                                >
+                                    <Image priority alt={'achievement image'} layout={'fill'} objectFit={'cover'}
+                                           src={imageURL}/>
 
-                                        {/* label of images*/}
+                                    {/* label of images*/}
 
-                                        <Box className={classes.imageLabel}>
+                                    <Box className={classes.imageLabel}>
+                                        <Box>
                                             <Box>
-                                                <Box>
-                                                    <Typography align={'left'} variant={'h5'}>
-                                                        {title}
-                                                    </Typography>
-                                                </Box>
-                                                <Box>
-                                                    <Typography align={'left'} variant={'h5'}>
-                                                        {subTitle}
-                                                    </Typography>
-                                                </Box>
+                                                <Typography align={'left'} variant={'h5'}>
+                                                    {title}
+                                                </Typography>
                                             </Box>
-
-                                            <Box className={classes.imageBtnsContainer}>
-                                                <Box className={classes.imageBtns}>
-
-                                                    <Box>
-                                                        <Button onClick={forwardAchievementHandler} color={'primary'}
-                                                                className={`${classes.sideBtn} ${classes.sideBtnFirst}`}
-                                                                variant={'contained'}>
-                                                            <ArrowForwardIosOutlined/>
-                                                        </Button>
-                                                    </Box>
-                                                    <Box>
-                                                        <Button onClick={backAchievementHandler} color={'primary'}
-                                                                className={`${classes.sideBtn} ${classes.sideBtnLast}`}
-                                                                variant={'contained'}>
-                                                            <ArrowBackIosOutlined/>
-                                                        </Button>
-                                                    </Box>
-                                                </Box>
-
+                                            <Box>
+                                                <Typography align={'left'} variant={'h5'}>
+                                                    {subTitle}
+                                                </Typography>
                                             </Box>
                                         </Box>
 
+                                        <Box className={classes.imageBtnsContainer}>
+                                            <Box className={classes.imageBtns}>
+
+                                                <Box>
+                                                    <Button onClick={forwardAchievementHandler} color={'primary'}
+                                                            className={`${classes.sideBtn} ${classes.sideBtnFirst}`}
+                                                            variant={'contained'}>
+                                                        <ArrowForwardIosOutlined/>
+                                                    </Button>
+                                                </Box>
+                                                <Box>
+                                                    <Button onClick={backAchievementHandler} color={'primary'}
+                                                            className={`${classes.sideBtn} ${classes.sideBtnLast}`}
+                                                            variant={'contained'}>
+                                                        <ArrowBackIosOutlined/>
+                                                    </Button>
+                                                </Box>
+                                            </Box>
+
+                                        </Box>
                                     </Box>
 
                                 </Box>
+
                             ))
                         }
 
