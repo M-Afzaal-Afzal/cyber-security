@@ -67,7 +67,7 @@ const ContactusSection = () => {
 
                 <Box className={classes.contactTextContainer}>
                     <Typography align={'center'} className={classes.contactText} variant={'body1'}>
-                        Contact us on the social platform of your choice. You can also contact us by using the contact
+                      We are located in New York. Contact us on the social platform of your choice. You can also contact us by using the contact
                         us chat button available on the bottom right corner of the page.
                     </Typography>
                 </Box>

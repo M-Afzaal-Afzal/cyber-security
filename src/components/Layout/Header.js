@@ -8,7 +8,6 @@ import {
     Hidden,
     IconButton,
     makeStyles,
-    Switch,
     Toolbar
 } from "@material-ui/core";
 import {useDispatch, useSelector} from "react-redux";
@@ -91,36 +90,43 @@ const Header = () => {
                         <Box className={classes.imageLink} component={Link} to={'home'} smooth={true}>
                             <Box className={classes.imageContainer}>
                                 <Image priority alt={'Cyber Security'}
-                                       src={'https://res.cloudinary.com/afzaal1721/image/upload/v1619584623/Logoh_diisax.png'}
-                                       layout={'fill'} objectFit={'cover'}/>
+                                       src={'https://res.cloudinary.com/dcrjxslxs/image/upload/v1619661192/Logoh_mrs5xt.png'}
+                                       layout={'fill'}
+                                       objectFit={'cover'}
+                                />
                             </Box>
                         </Box>
                     </Box>
 
                     {/* Center Icons*/}
 
-                    <Hidden smDown>
-                        <Box className={`${classes.grow} ${classes.centerIconsContainer}`}>
-                            <Button component={Link} to={'home'} smooth={true}>
-                                HOME
-                            </Button>
-                            <Button component={Link} to={'contactus'} smooth={true}>
-                                CONTACT US
-                            </Button>
-                        </Box>
-                    </Hidden>
+                    {/*<Hidden smDown>*/}
+                    {/*    <Box className={`${classes.grow} ${classes.centerIconsContainer}`}>*/}
+                    {/*       */}
+                    {/*    </Box>*/}
+                    {/*</Hidden>*/}
 
                     {/* Right Icons*/}
 
                     <Box className={`${classes.grow} ${classes.rightIconsContainer}`}>
                         <Hidden smDown>
-                            <Switch
-                                color={'primary'}
-                                checked={isDarkMode}
-                                onChange={darkModeHandler}
-                                name="Dark Mode Switch"
-                                inputProps={{'aria-label': 'Dark Mode Switch'}}
-                            />
+                            <Button size={'large'} component={Link} to={'home'} smooth={true}>
+                                HOME
+                            </Button>
+                            <Button size={'large'} component={Link} to={'contactus'} smooth={true}>
+                                CONTACT US
+                            </Button>
+                            <Button size={'large'} onClick={darkModeHandler}>
+                                {isDarkMode ? 'LIGHT MODE' : 'DARK MODE'}
+                            </Button>
+
+                            {/*<Switch*/}
+                            {/*    color={'primary'}*/}
+                            {/*    checked={isDarkMode}*/}
+                            {/*    onChange={darkModeHandler}*/}
+                            {/*    name="Dark Mode Switch"*/}
+                            {/*    inputProps={{'aria-label': 'Dark Mode Switch'}}*/}
+                            {/*/>*/}
                         </Hidden>
 
                         <Hidden mdUp>
@@ -139,7 +145,7 @@ const Header = () => {
                                 <Box component={Link} to={'home'} smooth={true}>
                                     <Box onClick={toggleDrawer} className={classes.drawerImageContainer}>
                                         <Image
-                                            src={'https://res.cloudinary.com/afzaal1721/image/upload/v1619584629/Logov_ov2lqe.png'}
+                                            src={'https://res.cloudinary.com/dcrjxslxs/image/upload/v1619661183/Logov_rrl6mp.png'}
                                             layout={'fill'} objectFit={'cover'}
                                             priority
                                         />

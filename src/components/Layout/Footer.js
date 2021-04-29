@@ -47,7 +47,9 @@ const Footer = () => {
                 <Container maxWidth={'lg'}>
                     <Box className={classes.footerImageContent}>
                         <Box className={classes.imageContainer}>
-                            <Image priority alt={'Cyber Security'} src={'https://res.cloudinary.com/afzaal1721/image/upload/v1619584629/Logov_ov2lqe.png'} layout={'fill'}
+                            <Image priority alt={'Cyber Security'}
+                                   src={'https://res.cloudinary.com/dcrjxslxs/image/upload/v1619661183/Logov_rrl6mp.png'}
+                                   layout={'fill'}
                                    objectFit={'cover'}/>
                         </Box>
                     </Box>

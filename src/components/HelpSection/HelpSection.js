@@ -119,27 +119,27 @@ const HelpSection = () => {
         {
             id: 1,
             title: 'Mobile Design',
-            value: '80'
+            value: '100'
         },
         {
             id: 2,
             title: 'UI/UX Design',
-            value: '85'
+            value: '100'
         },
         {
             id: 3,
             title: 'Content Marketing',
-            value: '95'
+            value: '100'
         },
         {
             id: 4,
             title: 'Growth Hacking',
-            value: '88'
+            value: '100'
         },
         {
             id: 5,
             title: 'Wordpress',
-            value: '90'
+            value: '100'
         },
 
     ];
@@ -199,11 +199,11 @@ const HelpSection = () => {
                                     <Box className={classes.linearProgressContainer}>
                                         <LinearProgress variant={'determinate'} value={+value}/>
                                     </Box>
-                                    <Box className={classes.linearProgressLabelContainer}>
-                                        <Typography className={classes.linearProgressLabel} variant={'body1'}>
-                                            {value}%
-                                        </Typography>
-                                    </Box>
+                                    {/*<Box className={classes.linearProgressLabelContainer}>*/}
+                                    {/*    <Typography className={classes.linearProgressLabel} variant={'body1'}>*/}
+                                    {/*        {value}%*/}
+                                    {/*    </Typography>*/}
+                                    {/*</Box>*/}
                                 </Box>
                             </Box>
                         ))
